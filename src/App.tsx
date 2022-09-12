@@ -2,6 +2,7 @@ import { ConnectWallet, useAddress, Web3Button } from "@thirdweb-dev/react";
 
 export default function Home() {
   const address = useAddress();
+  const CONTRACT_ADDRESS = "0xC8642A0c05052Cefe3208A5F697915cF8EAd90E7";
 
   return (
     <div>
@@ -9,7 +10,7 @@ export default function Home() {
       <br></br>
       <Web3Button
         // The contract address
-        contractAddress="0xC8642A0c05052Cefe3208A5F697915cF8EAd90E7"
+        contractAddress={CONTRACT_ADDRESS}
         // Access the contract itself, perform any action you want on it:
         action={(contract) => {
           contract.call("claim", address, 0, 1);
@@ -27,7 +28,7 @@ export default function Home() {
       <br></br>
       <Web3Button
         // The contract address
-        contractAddress="0xC8642A0c05052Cefe3208A5F697915cF8EAd90E7"
+        contractAddress={CONTRACT_ADDRESS}
         // Access the contract itself, perform any action you want on it:
         action={(contract) => {
           contract.call("foundTreasure", address);
@@ -45,7 +46,7 @@ export default function Home() {
       <br></br>
       <Web3Button
         // The contract address
-        contractAddress="0xC8642A0c05052Cefe3208A5F697915cF8EAd90E7"
+        contractAddress={CONTRACT_ADDRESS}
         // Access the contract itself, perform any action you want on it:
         action={(contract) => {
           contract.call("claim", address, 1, 1);
