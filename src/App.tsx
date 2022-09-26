@@ -2,23 +2,22 @@ import { ConnectWallet, useAddress, Web3Button } from "@thirdweb-dev/react";
 
 export default function Home() {
   const address = useAddress();
-  const CONTRACT_ADDRESS = "0x42030753485225a4B922a9607911b20b2B754F3c";
+  const CONTRACT_ADDRESS = "0xD2A62504beC93F8E9bc34a5D34D34c2A959b0243";
 
   return (
     <div>
-      <ConnectWallet accentColor="#f213a4" colorMode="light" />
+      <ConnectWallet />
       <br></br>
       <h2>Claim your Scavenger Hunt Participant NFT to start playing</h2>
+
       <Web3Button
         // The contract address
         contractAddress={CONTRACT_ADDRESS}
         // Access the contract itself, perform any action you want on it:
         action={async (contract) => {
-          contract.call("claim", address, 0, 1);
+          await contract.erc1155.claim(0, 1);
+          alert(address + " successfully claimed participant NFT!!!");
         }}
-        // Some customization of colors and styling
-        colorMode="light"
-        accentColor="#F213A4"
         // If the function is successful, we can do something here.
         onSuccess={(result) => console.log(result)}
         // If the function fails, we can do something here.
@@ -26,18 +25,17 @@ export default function Home() {
       >
         Get Participant NFT
       </Web3Button>
+
       <br></br>
       <h2>Come here if you find the treasure</h2>
       <Web3Button
         // The contract address
         contractAddress={CONTRACT_ADDRESS}
         // Access the contract itself, perform any action you want on it:
-        action={(contract) => {
-          contract.call("foundTreasure", address);
+        action={async (contract) => {
+          await contract.call("foundTreasure", address);
+          alert(address + " has found the treasure");
         }}
-        // Some customization of colors and styling
-        colorMode="light"
-        accentColor="#F213A4"
         // If the function is successful, we can do something here.
         onSuccess={(result) => console.log(result)}
         // If the function fails, we can do something here.
@@ -51,12 +49,10 @@ export default function Home() {
         // The contract address
         contractAddress={CONTRACT_ADDRESS}
         // Access the contract itself, perform any action you want on it:
-        action={(contract) => {
-          contract.call("claim", address, 1, 1);
+        action={async (contract) => {
+          await contract.erc1155.claim(1, 1);
+          alert(address + " has claimed the prize!!!");
         }}
-        // Some customization of colors and styling
-        colorMode="light"
-        accentColor="#F213A4"
         // If the function is successful, we can do something here.
         onSuccess={(result) => console.log(result)}
         // If the function fails, we can do something here.

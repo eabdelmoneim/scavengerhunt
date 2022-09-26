@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Goerli;
+const activeChainId = ChainId.ArbitrumGoerli;
 
 const container = document.getElementById("root");
 const root = createRoot(container!);

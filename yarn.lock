@@ -2200,6 +2200,11 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+"@react-icons/all-files@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@react-icons/all-files/-/all-files-4.1.0.tgz#477284873a0821928224b6fc84c62d2534d6650b"
+  integrity sha512-hxBI2UOuVaI3O/BhQfhtb4kcGn9ft12RWAFVMUeNjqqhLsHvFtzIkFaptBJpFDANTKoDfdVoHTKZDlwKCACbMQ==
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz#04bc0608f4aa4b2e4b1aebf284344d0f68fda283"
@@ -2460,31 +2465,30 @@
   resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.3.tgz#af975e367743fa91989cd666666aec31a8f50591"
   integrity sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==
 
-"@thirdweb-dev/contracts-js@^1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/contracts-js/-/contracts-js-1.1.7.tgz#2ffcf7c2828fb24e0738c2d26b4904dbccee9251"
-  integrity sha512-yjT96Pev5uUqftT+7zqPar1Jt1skDCzKhbgQ0FUi1C1WXGPLzzyZ9e33ehBym0jWFnA3fsMRIAFWCV2jNwoKIw==
+"@thirdweb-dev/contracts-js@^1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/contracts-js/-/contracts-js-1.1.8.tgz#4e4b840ac0f0f2abcb4c0d685f05a3a683e7f7bc"
+  integrity sha512-RRO2VH6qz4SRFGsg6Tx40aeHoj3hUbTjj+zZX0C8H3MArNgbvjMgqV1PPaDVpFWb++hJamV49cJiT2RRxVqHIg==
   dependencies:
-    "@thirdweb-dev/contracts" "3.1.6-1"
+    "@thirdweb-dev/contracts" "3.1.8-0"
 
-"@thirdweb-dev/contracts@3.1.6-1":
-  version "3.1.6-1"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/contracts/-/contracts-3.1.6-1.tgz#81fc678c89b407bd577d4021500ff1a5de825179"
-  integrity sha512-dNIqIsY2JYc+GVG9fZs3HfmgRY2pn6dYSmstGW4IcQmRpM4a3HYbz6FIgX4N9012xo0aNPbBWEq9pfQ3bdY86Q==
+"@thirdweb-dev/contracts@3.1.8-0":
+  version "3.1.8-0"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/contracts/-/contracts-3.1.8-0.tgz#847af3fe9a53368e7be04b7b6e6afe076d3d1676"
+  integrity sha512-PiQjdRcAUBlu3poc4g6dN9KvjTgYsA1Vi+B/IgryptCgcJeMY4cldMabKCgPaCg9dPVpUq4O+SOM00P6mBNvGw==
 
-"@thirdweb-dev/react@^2":
-  version "2.9.7"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/react/-/react-2.9.7.tgz#b32fcc2e0e90867a3f40cab89ebcac34573fe3f9"
-  integrity sha512-dq6HczywlZIhNE8+Ky7KwbE0LybLJNINkZOAOAmtYX5z01bNtPg4kwYqF353HUQeylUIie66YInR26txUyAx8Q==
+"@thirdweb-dev/react@^3":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/react/-/react-3.0.7.tgz#ca924b869912f3722faafe3aefea7f9506d1fcea"
+  integrity sha512-sQ5iprAa/Y8GtUdCN9Ri/5B5cFTO1NMjZdatpqOx+hYzk0pQfogrKC5zH5tC4VjfK7FuLrT27j1zLe2jnCB/sA==
   dependencies:
     "@emotion/react" "^11.10.0"
     "@emotion/styled" "^11.10.0"
     "@gnosis.pm/safe-core-sdk" "2.1.0"
     "@gnosis.pm/safe-ethers-adapters" "0.1.0-alpha.9"
     "@gnosis.pm/safe-ethers-lib" "1.1.0"
+    "@react-icons/all-files" "^4.1.0"
     "@tanstack/react-query" "^4.0.10"
-    "@thirdweb-dev/sdk" "^2.4.9"
-    "@thirdweb-dev/storage" "^0.2.8"
     "@zag-js/menu" "^0.1.11"
     "@zag-js/react" "0.1.16"
     color "^4.2.3"
@@ -2493,17 +2497,16 @@
     magic-sdk "^8.1.1"
     mime "^3.0.0"
     react-cool-dimensions "^2.0.7"
-    react-icons "^4.4.0"
     tiny-invariant "^1.2.0"
     wagmi "^0.2.28"
 
-"@thirdweb-dev/sdk@^2", "@thirdweb-dev/sdk@^2.4.9":
-  version "2.4.9"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/sdk/-/sdk-2.4.9.tgz#33a99f5c6aca8bf27065872646c17ee2381a5ca7"
-  integrity sha512-1+rhtLKlw5yMkBZ6JUVZItLo8sO77WJ2mhvTmKnEzQbfshdCd+1icq8Cw8v5AVFbpdMKTmF20wdW9bkbIzQ1LA==
+"@thirdweb-dev/sdk@^3":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/sdk/-/sdk-3.0.7.tgz#e520b90eaccc80bbfa49dd2977a0cbc2c4306e4f"
+  integrity sha512-NZn5bD6gZpFMosGdo7kXiL/PA+4H9/MpRN6Alem6ayZo5p4zhqJ56TmL8Z+1vGzhkgS2sUteVSROBsNqwjGTIA==
   dependencies:
-    "@thirdweb-dev/contracts-js" "^1.1.7"
-    "@thirdweb-dev/storage" "^0.2.8"
+    "@thirdweb-dev/contracts-js" "^1.1.8"
+    "@thirdweb-dev/storage" "^1.0.3"
     cbor-web "^8.1.0"
     cross-fetch "^3.1.5"
     eventemitter3 "^4.0.7"
@@ -2512,17 +2515,17 @@
     merkletreejs "^0.2.24"
     multihashes "^4.0.3"
     tiny-invariant "^1.2.0"
-    uuid "^8.3.2"
+    uuid "^9.0.0"
     zod "^3.11.6"
 
-"@thirdweb-dev/storage@^0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@thirdweb-dev/storage/-/storage-0.2.8.tgz#7c19b41dab363737e0015733a98e8f5252925db9"
-  integrity sha512-XM3wBlpUVWnMwBnHveWP1NgIsJDtvpzDsORO+DP8CQAsYizILKbiBC3n2w+eW/sLOGLuEYEUZk2zPFD/xpPM3Q==
+"@thirdweb-dev/storage@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/storage/-/storage-1.0.3.tgz#acc8bf26ba00b0b6b0bf62775262bd09f20e7bc5"
+  integrity sha512-f7V/mmprYdQ+JjnE7UrfthE84yY9QSH7UPG1cvN5z2aZm9JDG1/wMa1jHCDtgqUwc15JVZTUhRSlcgOFECdIEg==
   dependencies:
     cross-fetch "^3.1.5"
     form-data "^4.0.0"
-    zod "^3.11.6"
+    uuid "^9.0.0"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -9502,11 +9505,6 @@ react-error-overlay@^6.0.11:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.11.tgz#92835de5841c5cf08ba00ddd2d677b6d17ff9adb"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
 
-react-icons@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
-  integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
-
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -11014,6 +11012,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 v8-to-istanbul@^8.1.0:
   version "8.1.1"
