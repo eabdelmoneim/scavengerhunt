@@ -1,15 +1,26 @@
-import { ConnectWallet, useAddress, Web3Button } from "@thirdweb-dev/react";
+import {
+  ConnectWallet,
+  useAddress,
+  useContract,
+  useContractEvents,
+  Web3Button,
+} from "@thirdweb-dev/react";
 
 export default function Home() {
   const address = useAddress();
-  const CONTRACT_ADDRESS = "0xD2A62504beC93F8E9bc34a5D34D34c2A959b0243";
+  const CONTRACT_ADDRESS = "0xdcBD8c000b9c945C1b80f649B95bAfA214B6576D";
+  const { contract } = useContract(CONTRACT_ADDRESS);
+
+  const events = useContractEvents(contract);
+  const myEvents = events.data
+    ?.filter((event) => event.eventName === "TreasureFound")
+    .slice(0, 20);
 
   return (
-    <div>
+    <div style={{ width: 500 }}>
       <ConnectWallet />
       <br></br>
-      <h2>Claim your Scavenger Hunt Participant NFT to start playing</h2>
-
+      <h2>Claim a Scavenger Hunt Participant NFT</h2>
       <Web3Button
         // The contract address
         contractAddress={CONTRACT_ADDRESS}
@@ -27,7 +38,7 @@ export default function Home() {
       </Web3Button>
 
       <br></br>
-      <h2>Come here if you find the treasure</h2>
+      <h2>Scavenger Hunt</h2>
       <Web3Button
         // The contract address
         contractAddress={CONTRACT_ADDRESS}
@@ -58,8 +69,23 @@ export default function Home() {
         // If the function fails, we can do something here.
         onError={(error) => console.error(error)}
       >
-        Get Scavenger Hunt Finished NFT
+        Get Scavenger Hunt Prize NFT
       </Web3Button>
+      <h2>Game Events</h2>
+      {myEvents && myEvents?.length > 0
+        ? myEvents?.map((event) => {
+            if (event.eventName === "TreasureFound") {
+              return (
+                <h4
+                  key={`${event.transaction.transactionHash}_${event.transaction.logIndex}`}
+                  style={{ color: "grey" }}
+                >
+                  🎉{((" " + event.data.account) as string) + " won prize"}
+                </h4>
+              );
+            }
+          })
+        : "no events yet"}
     </div>
   );
 }
